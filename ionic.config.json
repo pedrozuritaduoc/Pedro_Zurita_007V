@@ -1,0 +1,7 @@
+{
+  "name": "demop2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
