@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+  <br/>
+    <ion-title class="ion-text-center">Catalogo</ion-title>
+    <ion-button fill="clear" (click)="cerrarSesion()" class="btn-perfil">&lt;salir</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-toolbar>
+
+
+          
+
+
+        </ion-toolbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list *ngIf="productos">
+          <ion-item *ngFor="let producto of productos">
+            <ion-avatar aria-hidden="true" slot="start">
+              <img alt="" [src]="producto.thumbnail" />
+            </ion-avatar>
+            <ion-label>
+
+              <strong>{{ producto.title }}</strong><br />
+              <ion-text> $ {{ producto.price }}</ion-text><br />
+
+              <ion-note> {{ producto.discountPercentage }}%</ion-note>
+
+            </ion-label>
+
+          </ion-item>
+
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-infinite-scroll threshold="100px" (ionInfinite)="onIonInfinite($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando ...."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+  
+
+
+</ion-content>

@@ -1,0 +1,19 @@
+ionic start demop2 blank --type=angular
+
+
+npx ionic generate page inicio-sesion
+npx ionic generate page productos
+npx ionic generate page perfil-usuario
+
+
+npx ionic serve
+
+npx ionic generate service servicio/auth/auth
+
+npx ionic generate service servicio/producto/producto
+CanActivate con Space seleccionas
+
+
+
+username: michaelw
+password: michaelwpass
